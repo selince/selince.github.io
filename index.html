@@ -1,63 +1,262 @@
-<!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on https://github.com/jonrohan -->
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
-  <link rel="stylesheet" href="stylesheets/github-dark.css">
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
-
-  <title>Selince.GitHub.io</title>
-  <meta name="description" content="my dried food.">
-
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+	<title>抽奖活动</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	
 </head>
+<body class="background-img">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 padd0">
+				<div class="pull-left logo-img">
+				</div>
+				<div class="pull-right" style="position: relative; z-index: 1040;">
+					<img width="120px" src="images/guize.png" data-toggle="modal" data-target="#ruleModal" data-backdrop="static">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<img class="title" src="images/title.png">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 turntable-col text-center">
+				<img class="turntable" width="90%" src="images/turntable2.png">
+				<img class="turntable-circle" width="100px" src="images/turntable_circle.png">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 text-center changce-col">
+				您还有<span class="num">3</span>次抽奖机会
+			</div>
+			<div class="col-xs-12 text-center">
+				<div class="record-tag" data-toggle="modal" data-target="#myrecordModal" data-backdrop="static">我的中奖纪录</div>
+			</div>
+		</div>
+		<div class="row bottom-row" data-toggle="modal" data-target="#rewordModal" data-backdrop="static">
+			<div class="col-xs-12 tag-col"><b>获奖名单</b></div>
+			<div class="col-xs-12">
+				<div class="name-tag">恭喜159*****6699获得特等奖</div>
+			</div>
+		</div>
+	</div>
+	<div id="myModal0" class="modal fade">
+		<div class="modal-dialog" style="z-index: 1050">
+			<div class="modal-content" style="background-color: transparent;box-shadow: none; border: none;">
+				<div class="btn-close" data-dismiss="modal">
+					<img src="images/remove.png">
+				</div>
+				<div class="modal-body">
+					<div style="background-color: #fff;border-radius: 20px 20px 0px 0px;-webkit-border-radius: 20px 20px 0px 0px;-moz-border-radius: 20px 20px 0px 0px;"><img width="100%" src="images/none.png"></div>
+					<div style="background-color: #fff;border-radius: 0px 0px 20px 20px;-webkit-border-radius: 0px 0px 20px 20px;-moz-border-radius: 0px 0px 20px 20px;">
+						<div style="width:85%;margin:0px auto;padding:20px;">
+							<button class="btn btn-block model-btn" data-dismiss="modal">点击继续抽奖</button>
+							<button data-dismiss="modal" data-toggle="modal" data-target="#shareModal" data-backdrop="static" style="margin-top: 15px;" class="btn btn-block model-btn">运气不好！让朋友试试</button>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div id="myModal1" class="modal fade">
+		<div class="modal-dialog" style="z-index: 1050">
+			<div class="modal-content" style="background-color: transparent;box-shadow: none; border: none;">
+				<div class="btn-close" data-dismiss="modal">
+					<img src="images/remove.png">
+				</div>
+				<div class="modal-body">
+					<div style="background-color: #fff;border-radius: 20px 20px 0px 0px;-webkit-border-radius: 20px 20px 0px 0px;-moz-border-radius: 20px 20px 0px 0px;"><img width="100%" src="images/lev1.png"></div>
+					<div style="background-color: #fff;border-radius: 0px 0px 20px 20px;-webkit-border-radius: 0px 0px 20px 20px;-moz-border-radius: 0px 0px 20px 20px;">
+						<div style="width:85%;margin:0px auto;padding:20px;">
+							<button data-dismiss="modal" data-toggle="modal" data-target="#shareModal" data-backdrop="static" class="btn btn-block model-btn">运气好！喊人来抽奖</button>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div id="myModal2" class="modal fade">
+		<div class="modal-dialog" style="z-index: 1050">
+			<div class="modal-content" style="background-color: transparent;box-shadow: none; border: none;">
+				<div class="btn-close" data-dismiss="modal">
+					<img src="images/remove.png">
+				</div>
+				<div class="modal-body">
+					<div style="background-color: #fff;border-radius: 20px 20px 0px 0px;-webkit-border-radius: 20px 20px 0px 0px;-moz-border-radius: 20px 20px 0px 0px;"><img width="100%" src="images/lev2.png"></div>
+					<div style="background-color: #fff;border-radius: 0px 0px 20px 20px;-webkit-border-radius: 0px 0px 20px 20px;-moz-border-radius: 0px 0px 20px 20px;">
+						<div style="width:85%;margin:0px auto;padding:20px;">
+							<button data-dismiss="modal" data-toggle="modal" data-target="#shareModal" data-backdrop="static" class="btn btn-block model-btn">运气好！喊人来抽奖</button>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div id="myModal3" class="modal fade">
+		<div class="modal-dialog" style="z-index: 1050">
+			<div class="modal-content" style="background-color: transparent;box-shadow: none; border: none;">
+				<div class="btn-close" data-dismiss="modal">
+					<img src="images/remove.png">
+				</div>
+				<div class="modal-body">
+					<div style="background-color: #fff;border-radius: 20px 20px 0px 0px;-webkit-border-radius: 20px 20px 0px 0px;-moz-border-radius: 20px 20px 0px 0px;"><img width="100%" src="images/lev3.png"></div>
+					<div style="background-color: #fff;border-radius: 0px 0px 20px 20px;-webkit-border-radius: 0px 0px 20px 20px;-moz-border-radius: 0px 0px 20px 20px;">
+						<div style="width:85%;margin:0px auto;padding:20px;">
+							<button data-dismiss="modal" data-toggle="modal" data-target="#shareModal" data-backdrop="static" class="btn btn-block model-btn">运气好！喊人来抽奖</button>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div id="ruleModal" class="modal fade" style="overflow-y: hidden;">
+		<div class="modal-dialog" style="z-index: 1050">
+			<div class="modal-content" style="background-color: transparent;box-shadow: none; border: none;">
+				<div class="btn-close" data-dismiss="modal">
+					<img src="images/remove.png">
+				</div>
+				<div class="modal-body">
+					<div style="border-radius: 20px 20px 0px 0px;-webkit-border-radius: 20px 20px 0px 0px;-moz-border-radius: 20px 20px 0px 0px;"><img width="100%" src="images/model_header.png"></div>
+					<div style="background-color: #fff;border-radius: 0px 0px 20px 20px;-webkit-border-radius: 0px 0px 20px 20px;-moz-border-radius: 0px 0px 20px 20px;">
+						<div style="width:95%;margin:0px auto;padding:10px 0px;">
+							<h3 class="text-center model-header">活动规则</h3>
+							<div style="height: 270px; overflow-y: scroll;font-size: 14px">
+								<p>1. 每1名用户，拥有3次抽奖机会；</p>
+								<p>2.同一微信ID，视为同一用户，仅限领
+								    一份奖品；</p>
+								<p>3.【兑奖方法】:请持微信中奖码（点击
+								  “我的中奖纪录”查看），到本活动区
+								     兑奖；</p>
+								<p>4.【奖品发放】:二、三等奖奖品，将在
+								    活动现场发放；一等奖奖品，将在活动
+								     结束后的30个工作日内发放，奖品包
+								     邮，中奖者在现场填写领奖信息即为获
+								     得领奖资格；</p>
+								<p>5. 活动时间: 2016年9月25日8:00至
+								   11:30，请在活动时间内兑奖，逾期未
+								  兑奖用户视为放弃奖品；不在现场的中
+								 奖用户，可凭微信中奖码截图，由其他
+								 用户代领，工作人员将进行中奖资格审
+								     核及奖品发放。</p>
+								 
+								<p>活动最终解释权归~~有限公司所有</p>
+							</div>
+						</div>
+						<div style="width:85%;margin:0px auto;padding:10px;">
+							<button class="btn btn-block model-btn" data-dismiss="modal">关闭</button>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div id="rewordModal" class="modal fade" style="overflow-y: hidden;">
+		<div class="modal-dialog" style="z-index: 1050">
+			<div class="modal-content" style="background-color: transparent;box-shadow: none; border: none;">
+				<div class="btn-close" data-dismiss="modal">
+					<img src="images/remove.png">
+				</div>
+				<div class="modal-body">
+					<div style="background-color: #fff;border-radius: 20px 20px 0px 0px;-webkit-border-radius: 20px 20px 0px 0px;-moz-border-radius: 20px 20px 0px 0px;"><img width="100%" src="images/name_tag.png"></div>
+					<div style="background-color: #fff;border-radius: 0px 0px 20px 20px;-webkit-border-radius: 0px 0px 20px 20px;-moz-border-radius: 0px 0px 20px 20px;padding-bottom: 30px; max-height:360px;overflow-y: auto">
+						<div style="width:90%;margin:0px auto;padding:10px;border-bottom: 1px #D52020 solid;">
+							<div class="pull-left">158****1233</div>
+							<div class="pull-right">获得二等奖</div>
+							<div style="clear: both"></div>
+						</div>
+						<div style="width:90%;margin:0px auto;padding:10px;border-bottom: 1px #D52020 solid;">
+							<div class="pull-left">158****1233</div>
+							<div class="pull-right">获得一等奖</div>
+							<div style="clear: both"></div>
+						</div>
+						<div style="width:90%;margin:0px auto;padding:10px;border-bottom: 1px #D52020 solid;">
+							<div class="pull-left">158****1233</div>
+							<div class="pull-right">获得三等奖</div>
+							<div style="clear: both"></div>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div id="shareModal" class="modal fade">
+		<div class="modal-dialog" style="z-index: 1050">
+			<div class="modal-content" style="background-color: transparent;box-shadow: none; border: none;">
+				<div class="btn-close" data-dismiss="modal">
+					<img style="width: 180px" src="images/share_tag.png">
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 
-<body>
-
-  <div class="wrapper">
-    <header>
-      <h1 class="title">Selince.GitHub.io</h1>
-    </header>
-    <div id="container">
-      <p class="tagline">my dried food.</p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/selince" class="code">View Selince.GitHub.io on GitHub</a>
-        </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <h1>
-<a id="selincegithubio" class="anchor" href="#selincegithubio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>selince.github.io</h1>
-
-<p>my dried food.</p>
-        </article>
-      </div>
-    </div>
-    <footer>
-      <div class="owner">
-
-      <p><a href="https://github.com/selince" class="avatar"><img src="https://avatars0.githubusercontent.com/u/22169683?v=3&amp;s=60" width="48" height="48"></a>View <a href="https://github.com/selince">selince</a> on <a href="https://www.github.com">GitHub</a></p>
-
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/selince/selince.github.io/tarball/master" class="tar">tar</a><a href="https://github.com/selince/selince.github.io/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
-
-  
+	<div id="myrecordModal" class="modal fade">
+		<div class="modal-dialog" style="z-index: 1050">
+			<div class="modal-content" style="background-color: transparent;box-shadow: none; border: none;">
+				<div class="btn-close" data-dismiss="modal">
+					<img src="images/remove.png">
+				</div>
+				<div class="modal-body">
+					<div style="border-radius: 20px 20px 0px 0px;-webkit-border-radius: 20px 20px 0px 0px;-moz-border-radius: 20px 20px 0px 0px;"><img width="100%" src="images/model_header.png"></div>
+					<div style="padding: 40px 10px;background-color: #fff;border-radius: 0px 0px 20px 20px;-webkit-border-radius: 0px 0px 20px 20px;-moz-border-radius: 0px 0px 20px 20px;">
+						<div style="margin:0px auto;padding:20px 0px;background-color: #e5e5e5;">
+							<div style="width: 120px;height:120px;background-color:#fff;border-radius: 8px;-webkit-border-radius: 8px;-moz-border-radius: 8px; margin:10px auto">
+								
+							</div>
+							<div class="text-center">中奖码</div>
+							<div class="text-center">X等奖</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
 </body>
 </html>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	function getNum () {
+		return parseInt(4*Math.random())+1;//模拟接口，获取奖励类型（4谢谢参与，1一等奖，2二等奖，3三等奖）
+	}
+	$(function () {
+		var count = 0;//次数
+		var deg = 0;//旋转度数
+		$('.turntable-circle').on('click', function () {
+			count ++;
+			$('.turntable').addClass('rotatescale');
+			$('body').append('<div class="drop-disable"></div>');
+			if (getNum() != '') {//获取数据后执行以下代码
+				var num = getNum();
+				if (num == 4) {
+					deg = count * 360 * 15 + 90;
+				} else if (num == 1) {
+					deg = count * 360 * 15;
+				} else if (num == 2) {
+					deg = count * 360 * 15 + 270;
+				} else if (num == 3) {
+					deg = count * 360 * 15 + 180;
+				}
+				$('.turntable').css({'transform':'rotate(' + deg + 'deg)','-ms-transform':'rotate(' + deg + 'deg)','-moz-transform':'rotate(' + deg + 'deg)','-webkit-transform':'rotate(' + deg + 'deg)','-o-transform':'rotate(' + deg + 'deg)'});
+				function resultFunc () {
+					if (num == 4) {
+						$('#myModal0').modal({'show': 'true', 'backdrop':'static'});
+					} else if (num == 1) {
+						$('#myModal1').modal({'show': 'true', 'backdrop':'static'});
+					} else if (num == 2) {
+						$('#myModal2').modal({'show': 'true', 'backdrop':'static'});
+					} else if (num == 3) {
+						$('#myModal3').modal({'show': 'true', 'backdrop':'static'});
+					}
+					$('.drop-disable').remove();
+				}
+				setTimeout('$(".turntable").removeClass("rotatescale");', 8000)
+				setTimeout(resultFunc, 8500);
+			}
+		});
+	})
+</script>
